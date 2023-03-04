@@ -11,7 +11,16 @@ function DashboardLayout({children}:{children: any}) {
                     <ExamediLogo/>
                 </div>
             </div>
-            <div className="h-[45px] bg-examedi-blue-dark w-full"></div>
+            <div className="h-[45px] bg-examedi-blue-dark w-full text-white flex items-center justify-center">
+                <div>
+                    <span className="underline font-bold">
+                        Descarga la app hoy
+                    </span>— 
+                    <span className="font-[500]">
+                    cuida tu salud, desde tu bolsillo
+                    </span>
+                </div>
+            </div>
             <div className="w-full flex min-h-screen">
                 <div className="min-h-screen bg-white w-[325px] border-r-[1px] shadow-lg pt-[50px]">
                     <div className="text-3xl font-[600] text-gray-400 pl-[30px]">
