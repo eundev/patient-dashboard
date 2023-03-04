@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Scandia';
+  font-weight: 400;
+  src: url("fonts/Scandia-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Scandia';
+  font-weight: 500;
+  src: url("fonts/Scandia-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Scandia';
+  font-weight: 700;
+  src: url("fonts/Scandia-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
