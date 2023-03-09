@@ -1,7 +1,8 @@
 import {Switch, Route} from "wouter";
 import DashboardLayout from "./layouts/DashboardLayout";
-import Results from "./views/Results";
 import Home from "./views/Home";
+import IndividualResult from "./views/results/Individual";
+import ResultsList from "./views/results/List";
 
 function Router(){
     return (
@@ -13,7 +14,12 @@ function Router(){
             </Route>
             <Route path="/results">
                 <DashboardLayout>
-                    <Results/>
+                    <ResultsList/>
+                </DashboardLayout>
+            </Route>
+            <Route path="/results/:id">
+                <DashboardLayout>
+                    <IndividualResult/>
                 </DashboardLayout>
             </Route>
         </Switch>

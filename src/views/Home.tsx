@@ -8,11 +8,13 @@ function CompleteSurveyPrompt(){
 }
 
 function Home(){
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState(true);
     return <div>
+        {/*
           <div className="p-1 absolute bg-gray-100 w-full right-0">
             {active ? "Usuario con agenda existente": "Usuario sin agenda"}: <button className="rounded-sm bg-examedi-blue-strong hover:examedi-blue-light text-white px-2 py-[1px]" onClick={()=>{ setActive(!active) } }>Toggle</button>
           </div>
+        */}
             {!active && (<>
                 <div className="w-full bg-white min-h-[400px] flex flex-col items-center justify-center">
                     <h1 className="text-[rgb(72,72,72)] text-3xl font-semibold">Bienvenido a Examedi</h1>
@@ -38,7 +40,7 @@ function Home(){
                 <div className="max-w-[1100px] mx-auto p-[30px] bg-white my-[22px] rounded-md">
                     <div className="w-full rounded-xl grid grid-cols-5 gap-4 rounded-md">
                         <div className="col-span-3 h-[360px] rounded-md">
-                            <ResultChart/>
+                            <ResultChart showSelect={true}/>
                         </div>
                         <div className="col-span-2 h-[300px] rounded-md grid grid-rows-2 gap-4">
                            <div>
