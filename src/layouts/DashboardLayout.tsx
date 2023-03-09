@@ -5,7 +5,7 @@ import ExamediLogo from '../icons/ExamediLogo';
 
 function DashboardLayout({children}:{children: any}) {
     return (
-        <div className="w-full min-h-screen bg-gray-100 px-[15px]">
+        <div className="w-full max-h-screen bg-gray-100">
             <div className="h-[80px] bg-white w-full border-b-[1px] shadow-lg flex items-center pl-[30px]">
                 <div>
                     <ExamediLogo/>
@@ -21,8 +21,8 @@ function DashboardLayout({children}:{children: any}) {
                     </span>
                 </div>
             </div>
-            <div className="w-full flex min-h-screen">
-                <div className="min-h-screen bg-white w-[325px] border-r-[1px] shadow-lg pt-[50px]">
+            <div className="w-full flex overflow-auto">
+                <div className="bg-white w-[325px] border-r-[1px] shadow-lg pt-[50px]">
                     <div className="text-3xl font-[600] text-gray-400 pl-[30px]">
                         Tu Perfil
                     </div>
@@ -34,7 +34,7 @@ function DashboardLayout({children}:{children: any}) {
                         ))}
                     </div>
                 </div>
-                <div className="w-full bg-[#f2f6fa]">
+                <div className="w-full bg-[#f2f6fa] h-[calc(100vh-125px)] overflow-auto">
                     {children}
                 </div>
             </div>
