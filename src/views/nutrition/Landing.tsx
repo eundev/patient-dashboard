@@ -37,8 +37,26 @@ function NutritionLanding(){
                     <BsFillChatSquareTextFill color="gray" size={18}/>
                 </button>
             </div>
-            <div className="max-w-[1100px] mx-auto p-[30px] bg-white mt-[22px] rounded-md h-[200px]">
+            <div className="max-w-[1100px] mx-auto p-[30px] bg-white mt-[44px] rounded-md">
+            <h3 className="text-xl font-semibold">
+                    Meal plan semanal
+                </h3>
+                <div className="mt-[22px]">
+                    {[1, 2, 3, 4].map((item, i)=>(
+                        <div key={i} className="inline-block bg-[whitesmoke] h-[350px] w-[250px] rounded-md mr-[10px] p-[20px]">
+                            <p className="font-bold">
+                                Lunes
+                            </p>
+                            <div className="mt-[22px]">
+                                {[1,2,3].map((item, i)=>(
+                                    <div key={i} className="w-full bg-white rounded-md h-[80px] mb-[11px]">
 
+                                        </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
             <div className="mt-[44px]">
                 <div className="w-full flex items-center justify-between">
