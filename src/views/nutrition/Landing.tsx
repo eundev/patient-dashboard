@@ -10,7 +10,7 @@ function NutritionLanding(){
                 </div>
             </div>
             <p>Encuentra todo lo que necesitas para llevar una alimentación sana</p>
-            <div className="max-w-[1100px] mx-auto p-[30px] bg-examedi-blue-strong mt-[22px] rounded-lg h-[40px]">
+            <div className="max-w-[1100px] mx-auto p-[30px] bg-white border-1 mt-[22px] rounded-full h-[40px]">
 
             </div>
             <div className="max-w-[1100px] mx-auto p-[30px] bg-white mt-[22px] rounded-md h-[200px]">
