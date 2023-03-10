@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import Drawer from 'react-modern-drawer'
+
+import {BsFillChatSquareTextFill} from "react-icons/bs";
+import NutritionChat from "../../components/nutrition/Chat";
 
 function NutritionLanding(){
+    const [isChatting, setIsChatting] = useState(false);
+
+    function toggleChat(){
+        setIsChatting(!isChatting);
+        return true;
+    }
+
     return <div>
+
+            <Drawer
+                open={isChatting}
+                onClose={toggleChat}
+                direction='right'
+                size={600}
+            >
+                <NutritionChat/>
+            </Drawer>
+
          <div className="w-full max-w-[1100px] pt-[60px] mx-auto">
             <div className="flex items-center">
                 <h1 className="text-[rgb(72,72,72)] text-4xl font-semibold">Nutrición</h1>
@@ -10,8 +31,11 @@ function NutritionLanding(){
                 </div>
             </div>
             <p>Encuentra todo lo que necesitas para llevar una alimentación sana</p>
-            <div className="max-w-[1100px] mx-auto p-[30px] bg-white border-1 mt-[22px] rounded-full h-[40px]">
-
+           
+            <div className="max-w-[1100px] mx-auto px-[30px] bg-white border-1 mt-[22px] rounded-full py-[10px] h-[70px]">
+                <button onClick={()=>{toggleChat()}} className="w-[50px] h-[50px] bg-gray-100 hover:bg-gray-200 hover:cursor-pointer rounded-full flex items-center justify-center float-right">
+                    <BsFillChatSquareTextFill color="gray" size={18}/>
+                </button>
             </div>
             <div className="max-w-[1100px] mx-auto p-[30px] bg-white mt-[22px] rounded-md h-[200px]">
 

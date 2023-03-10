@@ -11,9 +11,11 @@ function DashboardLayout({children}:{children: any}) {
                 <div>
                     <ExamediLogo/>
                 </div>
-                <div className="w-[50px] h-[50px] bg-gray-100 rounded-full mr-[20px] flex items-center justify-center">
-                    <BiUser size={20} color="gray"/>
-                </div>
+                <Link to="/settings">
+                    <div className="hover:bg-gray-200 hover:cursor-pointer w-[50px] h-[50px] bg-gray-100 rounded-full mr-[20px] flex items-center justify-center">
+                        <BiUser size={20} color="gray"/>
+                    </div>
+                </Link>
             </div>
             {/*
             <div className="h-[45px] bg-examedi-blue-dark w-full text-white flex items-center justify-center">

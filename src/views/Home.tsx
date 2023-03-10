@@ -8,6 +8,45 @@ function CompleteSurveyPrompt(){
     </div>
 }
 
+
+function NutriCard(){
+    return <Link to="/nutrition">
+        <div className="inline-block w-[400px] hover:bg-gray-100 hover:cursor-pointer bg-white rounded-md border-[1px]">
+            <div className="w-full h-[10px] bg-gray-200 border-radius-10">
+                <div className="w-[18%] h-[10px] bg-black"></div>
+            </div>
+            <div className="p-[20px]">
+                <div className='flex items-center'>
+                    <h4 className="text-3xl font-semibold">🍎 Nutrición</h4>
+                    <div className="ml-[10px] inline-block rounded-full bg-gray-100 border-[1px] font-bold text-xs px-[10px] py-[5px]">
+                        PRO
+                    </div>
+                </div>
+                <i>Con la meta de bajar peso</i>
+            </div>
+        </div>
+    </Link>  
+}
+
+function KineCard(){
+    return <Link to="/kinesiology">
+        <div className="inline-block ml-[20px] w-[400px] hover:bg-gray-100 hover:cursor-pointer bg-white rounded-md border-[1px]">
+            <div className="w-full h-[10px] bg-gray-200 border-radius-10">
+                <div className="w-[90%] h-[10px] bg-black"></div>
+            </div>
+            <div className="p-[20px]">
+                <div className='flex items-center'>
+                    <h4 className="text-3xl font-semibold">🏋️‍♂️ Kinesiología</h4>
+                    <div className="ml-[10px] inline-block rounded-full bg-gray-100 border-[1px] font-bold text-xs px-[10px] py-[5px]">
+                        BASICO
+                    </div>
+                </div>
+                <i>Mantenerme Activo</i>
+            </div>
+        </div>
+    </Link>
+}
+
 function Home(){
     const [active, setActive] = useState(true);
     return <div>
@@ -67,38 +106,8 @@ function Home(){
                             </p>
                         </div>
                         <div className="mt-[25px] w-full">
-                            <Link to="/nutrition">
-                                <div className="inline-block w-[400px] hover:bg-gray-100 hover:cursor-pointer bg-white rounded-md border-[1px]">
-                                    <div className="w-full h-[10px] bg-gray-200 border-radius-10">
-                                        <div className="w-[18%] h-[10px] bg-black"></div>
-                                    </div>
-                                    <div className="p-[20px]">
-                                        <div className='flex items-center'>
-                                            <h4 className="text-3xl font-semibold">🍎 Nutrición</h4>
-                                            <div className="ml-[10px] inline-block rounded-full bg-gray-100 border-[1px] font-bold text-xs px-[10px] py-[5px]">
-                                                PRO
-                                            </div>
-                                        </div>
-                                        <i>Con la meta de bajar peso</i>
-                                    </div>
-                                </div>
-                            </Link>  
-                            <Link to="/kinesiology">
-                                <div className="inline-block ml-[20px] w-[400px] hover:bg-gray-100 hover:cursor-pointer bg-white rounded-md border-[1px]">
-                                    <div className="w-full h-[10px] bg-gray-200 border-radius-10">
-                                        <div className="w-[90%] h-[10px] bg-black"></div>
-                                    </div>
-                                    <div className="p-[20px]">
-                                        <div className='flex items-center'>
-                                            <h4 className="text-3xl font-semibold">🏋️‍♂️ Kinesiología</h4>
-                                            <div className="ml-[10px] inline-block rounded-full bg-gray-100 border-[1px] font-bold text-xs px-[10px] py-[5px]">
-                                                BASICO
-                                            </div>
-                                        </div>
-                                        <i>Mantenerme Activo</i>
-                                    </div>
-                                </div>
-                            </Link>
+                            <NutriCard/>
+                            <KineCard/>
                             
                         </div>
                     </div>

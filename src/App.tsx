@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import 'react-modern-drawer/dist/index.css'
 import Router from "./Router";
 
 function App() {
