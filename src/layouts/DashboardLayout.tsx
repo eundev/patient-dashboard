@@ -47,7 +47,7 @@ function DashboardLayout({children}:{children: any}) {
                         ))}
                     </div>
                 </div>
-                <div className="w-full bg-[#f2f6fa] h-[calc(100vh-125px)] overflow-auto">
+                <div className="w-full bg-[#f2f6fa] h-[calc(100vh-70px)] overflow-auto">
                     {children}
                 </div>
             </div>

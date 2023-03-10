@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'wouter';
 import ResultChart from '../charts/ResultChart';
 
 function CompleteSurveyPrompt(){
@@ -54,24 +55,51 @@ function Home(){
                         </div>
                     </div>
                 </div>
-                <div className="w-full bg-white py-[50px] rounded-md mt-[40px]">
+              
+                <div className="w-full bg-white py-[100px] rounded-md mt-[40px]">
                     <div className="w-full max-w-[1100px] mx-auto">
-
                         <div>
                             <h3 className="text-3xl font-[500]">
-                            🍏 Evaluamos tu dieta, gratis
+                                Suscripciones de Salud
                             </h3>
                             <p>
-                                Sube fotos de tu comida y nuestra nutricionista te dará recomendaciones
+                                Para que tu no pierdas tiempo, nosotros hacemos todo
                             </p>
                         </div>
-                        <div className="mt-[20px]">
-                            {[1,2,3,4,5,6].map((item, i)=>(
-                                <div className="bg-gray-100 inline-block mr-[15px] rounded-md h-[150px] w-[150px]">
-                                    
+                        <div className="mt-[25px] w-full">
+                            <Link to="/nutrition">
+                                <div className="inline-block w-[400px] hover:bg-gray-100 hover:cursor-pointer bg-white rounded-md border-[1px]">
+                                    <div className="w-full h-[10px] bg-gray-200 border-radius-10">
+                                        <div className="w-[18%] h-[10px] bg-black"></div>
+                                    </div>
+                                    <div className="p-[20px]">
+                                        <div className='flex items-center'>
+                                            <h4 className="text-3xl font-semibold">🍎 Nutrición</h4>
+                                            <div className="ml-[10px] inline-block rounded-full bg-gray-100 border-[1px] font-bold text-xs px-[10px] py-[5px]">
+                                                PRO
+                                            </div>
+                                        </div>
+                                        <i>Con la meta de bajar peso</i>
+                                    </div>
                                 </div>
-                            ))}
-
+                            </Link>  
+                            <Link to="/kinesiology">
+                                <div className="inline-block ml-[20px] w-[400px] hover:bg-gray-100 hover:cursor-pointer bg-white rounded-md border-[1px]">
+                                    <div className="w-full h-[10px] bg-gray-200 border-radius-10">
+                                        <div className="w-[90%] h-[10px] bg-black"></div>
+                                    </div>
+                                    <div className="p-[20px]">
+                                        <div className='flex items-center'>
+                                            <h4 className="text-3xl font-semibold">🏋️‍♂️ Kinesiología</h4>
+                                            <div className="ml-[10px] inline-block rounded-full bg-gray-100 border-[1px] font-bold text-xs px-[10px] py-[5px]">
+                                                BASICO
+                                            </div>
+                                        </div>
+                                        <i>Mantenerme Activo</i>
+                                    </div>
+                                </div>
+                            </Link>
+                            
                         </div>
                     </div>
                 </div>
