@@ -30,12 +30,19 @@ function DashboardLayout({children}:{children: any}) {
             <div className="w-full flex overflow-auto">
                 <div className="bg-white w-[325px] border-r-[1px] shadow-lg pt-[50px]">
                     <div className="text-3xl font-[600] text-gray-400 pl-[30px]">
-                        Opciones
+                        Tu Examedi
                     </div>
                     <div className="mt-[20px] px-[15px]">
                         {navs.map((item, i)=>(
                             <Link to={item.link}>
-                                <div key={i} className="pl-[20px] font-[500] hover:cursor-pointer hover:bg-gray-100 rounded-[15px] h-[40px] w-full flex items-center">{item.displayName}</div>
+                                <div key={i} className="pl-[20px] font-[500] hover:cursor-pointer hover:bg-gray-100 rounded-[15px] h-[40px] w-full flex items-center">
+                                    <div>
+
+                                    {item.displayName}
+                                    </div>
+                                   
+                                
+                                </div>
                             </Link>
                         ))}
                     </div>

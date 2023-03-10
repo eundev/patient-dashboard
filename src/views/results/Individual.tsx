@@ -1,12 +1,25 @@
 import React from "react";
+import {BsDownload} from "react-icons/bs";
 import ResultChart from "../../charts/ResultChart";
 
 function IndividualResult() {
     return <>
             <div className="w-full max-w-[1100px] pt-[60px] mx-auto min-h-screen">
-                <div>
-                    <h1 className="text-[rgb(72,72,72)] text-4xl font-semibold">Resultados de tus exámenes de sangre</h1>
-                    <p>Realizados el Jueves 6 de Marzo, 2022 en Vitacura 3441</p>
+                <div className="w-full flex justify-between">
+
+                    <div>
+                        <h1 className="text-[rgb(72,72,72)] text-4xl font-semibold">Resultados de tus exámenes de sangre</h1>
+                        <p>Realizados el Jueves 6 de Marzo, 2022 en Vitacura 3441</p>
+                    </div>
+                    <div>
+                        <button className="font-semibold text-sm bg-white border-[1px] rounded-full hover:bg-gray-100 hover:cursor-pointer py-[5px] px-[15px] text-[rgb(72,72,72)] flex items-center justify-between">
+                        
+                        <BsDownload/> <span className="ml-[10px]">
+                        
+                            Descargar Resultados
+                            </span>
+                        </button>
+                    </div>
                 </div>
                 <div className="mt-[40px]">
                     {
