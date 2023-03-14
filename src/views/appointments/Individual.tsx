@@ -8,6 +8,7 @@ function IndividualAppointment(){
             <li>Antropometria a Domicilio</li>
             <li>Electrocardiograma</li>
             <li>Lab Tests</li>
+            <li>Kinesiología</li>
         </ul>
     </div>
 }
