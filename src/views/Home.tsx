@@ -69,11 +69,11 @@ function MentalHealthCard(){
 function Home(){
     const [active, setActive] = useState(true);
     return <div>
-        {/*
-          <div className="p-1 absolute bg-gray-100 w-full right-0">
+        
+          <div className="p-1 absolute bg-gray-100 right-0">
             {active ? "Usuario con agenda existente": "Usuario sin agenda"}: <button className="rounded-sm bg-examedi-blue-strong hover:examedi-blue-light text-white px-2 py-[1px]" onClick={()=>{ setActive(!active) } }>Toggle</button>
           </div>
-        */}
+        
             {!active && (<>
                 <div className="w-full bg-white min-h-[400px] flex flex-col items-center justify-center">
                     <h1 className="text-[rgb(72,72,72)] text-3xl font-semibold">Bienvenido a Examedi</h1>

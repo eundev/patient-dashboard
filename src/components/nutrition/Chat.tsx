@@ -3,8 +3,9 @@ import { BsArrowDownShort, BsFillChatSquareTextFill } from "react-icons/bs";
 
 function NutritionChat(){
     const [visible, setVisible] = useState(false);
+    const [hasFreeConsulta, setHasFreeConsulta] = useState(false);
     return <div>
-            {visible && <div className="shadow-xl bg-white w-[400px] h-[550px] right-[40px] bottom-[90px] rounded-lg fixed">
+            {visible && <div className="shadow-xl bg-white w-[375px] h-[650px] right-[40px] bottom-[90px] rounded-lg fixed">
                 <div className="bg-black w-full h-[80px] px-[10px] rounded-tl-lg rounded-tr-lg flex items-center">
                     <div className="w-[50px] h-[50px] rounded-full bg-gray-100">
 

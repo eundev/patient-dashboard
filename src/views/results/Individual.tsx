@@ -1,6 +1,19 @@
 import React from "react";
+import Modal from 'react-modal';
 import {BsDownload, BsShare} from "react-icons/bs";
+import "./IndividualResult.css";
 import ResultChart from "../../charts/ResultChart";
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+  },
+};
+
 
 function IndividualResult() {
     return <>
