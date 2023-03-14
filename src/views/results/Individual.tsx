@@ -1,5 +1,5 @@
 import React from "react";
-import {BsDownload} from "react-icons/bs";
+import {BsDownload, BsShare} from "react-icons/bs";
 import ResultChart from "../../charts/ResultChart";
 
 function IndividualResult() {
@@ -11,12 +11,19 @@ function IndividualResult() {
                         <h1 className="text-[rgb(72,72,72)] text-4xl font-semibold">Resultados de tus exámenes de sangre</h1>
                         <p>Realizados el Jueves 6 de Marzo, 2022 en Vitacura 3441</p>
                     </div>
-                    <div>
-                        <button className="font-semibold text-sm bg-white border-[1px] rounded-full hover:bg-gray-100 hover:cursor-pointer py-[5px] px-[15px] text-[rgb(72,72,72)] flex items-center justify-between">
+                    <div className="flex items-center">
+                        <button className="font-semibold text-sm bg-white border-[1px] rounded-full hover:bg-gray-100 hover:cursor-pointer py-[10px] px-[15px] text-[rgb(72,72,72)] flex items-center justify-between">
                         
                         <BsDownload/> <span className="ml-[10px]">
                         
                             Descargar Resultados
+                            </span>
+                        </button>
+                        <button className="font-semibold text-sm flex items-center ml-[5px] rounded-full p-[10px] bg-white border-[1px] hover:bg-gray-100 hover:cursor-pointer">
+                            <BsShare/>
+                            <span className="ml-[10px]">
+                        
+                            Compartir
                             </span>
                         </button>
                     </div>
