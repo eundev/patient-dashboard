@@ -13,7 +13,7 @@ function NutritionLanding(){
         return true;
     }
 
-    return <div className="relative">
+    return <div className="relative px-[20px]">
             <NutritionChat/>
             <div className="w-full max-w-[1100px] pt-[60px] mx-auto">
                 <div className="flex items-center">
@@ -49,9 +49,35 @@ function NutritionLanding(){
                         <h3 className="text-xl font-semibold">
                             Observaciones
                         </h3>
-                        <p>De tu primera cita</p>  
-                        <div className="bg-gray-50 w-full h-[300px] rounded-md mt-[22px]">
+                        <div className="w-full rounded-md mt-[44px] grid grid-cols-5 bg-gray-100 border-[1px]">
+                            <div className="h-[100px] p-[20px] col-span-1">
+                                <div className="mx-auto h-[100px] w-[100px] rounded-full bg-gray-300">
 
+                                </div>
+                                <p className="text-center font-semibold text-xs mt-[11px]">
+                                    Nta. Maria Jesus Zepeda
+                                </p>
+                                <p className="text-center">
+                                    14/03/2023
+                                </p>
+                            </div>
+                            <div className="p-[20px] col-span-4 bg-white">
+                                <p>
+                                    A continuación destaco lo más importante para poder lograr bajar 600g exactos para la pelea.
+                                    <br/>
+                                    <br/>
+                                    1. Hay que recortar aproximadamente 200kcal, por lo que la dieta total queda en 2000 kcal. Para esto debemos sacar el jugo de fruta (aunque sea natural), ya que siempre es mejor comer la fruta entera (esta tiene menor peak glicémico y aporta menos calorías). Cambiar el tipo de cereal por uno sin azúcar (enlinea, tika, vivo) y moderar la cantidad a máximo 3/4 taza. En la lista de supermercado hay cereales recomendados.
+                                    <br/>
+                                    <br/>
+                                    2. Es importante medir los alimentos en las medidas ya sea caseras o en gramos, porque eso hace la diferencia de 200 kcal.
+                                    <br/>
+                                    <br/>
+                                    3. No consumir más que 1/2 palta al día y 2 cdtas de aceite, evitar la mantequilla y mayonesa, recorté las calorías de esto.
+                                    <br/>
+                                    <br/>
+                                    4. Las proteínas son 150g de alguna carne en el día.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 <div className="max-w-[1100px] mx-auto p-[30px] bg-white mt-[44px] rounded-md">
@@ -59,18 +85,51 @@ function NutritionLanding(){
                         Plan de Alimentación
                     </h3>
                     <p>Máximo 1800 calorias al día, en horarios regulares.</p>
-                    <div className="mt-[22px]">
-                        {[{name: "Desayuno"}, {name: "Almuerzo"}, {name: "Once"}, {name: "Cena"}].map((item, i)=>(
-                            <div key={i} className="inline-block bg-[whitesmoke] h-[350px] w-[250px] rounded-md mr-[10px] p-[20px]">
+                    <div className="mt-[33px] divide-y">
+                        {[{name: "Desayuno", time: "7:30", information: [
+                            {label: "Opción 1", description: "1 taza de té o café con leche descremada y endulzante + 2 rebanadas de pan de molde integral + 1 rebanada de jamón de pavo."},
+                            {label: "Opción 2"},
+                            {label: "Opción 3"},
+                            {label: "Opción 4"},
+                            {label: "Opción 5"},
+                            {label: "Opción 6"},
+                            {label: "Opción 7"},
+                            {label: "Opción 8"},
+                        ]}, {name: "Almuerzo", time: "13:30", information: [
+                            {label: "Entrada"},
+                            {label: "Plato Principal"},
+                            {label: "Postre"},
+                            {label: "Bebestible"},
+                        ]}, {name: "Once", time: "17:00", information: [
+                            {label: "Opción 1"},
+                            {label: "Opción 2"},
+                            {label: "Opción 3"},
+                            {label: "Opción 4"},
+                            {label: "Opción 5"},
+                            {label: "Opción 6"},
+                            {label: "Opción 7"},
+                            {label: "Opción 8"},
+                        ]}, {name: "Cena", time: "20:30", information: [
+                            {label: "Opción 1"},
+                            {label: "Opción 2"},
+                            {label: "Postre"},
+                            {label: "Bebestible"},
+                        ]}].map((item, i)=>(
+                            <div key={i} className="inline-block w-full rounded-md py-[22px]">
                                 <p className="font-bold">
                                     {item.name}
                                 </p>
-                                <div className="mt-[22px]">
-                                    {[1,2,3].map((item, i)=>(
-                                        <div key={i} className="w-full bg-white rounded-md h-[80px] mb-[11px]">
-
-                                            </div>
-                                    ))}
+                                <p>
+                                    {item.time}
+                                </p>
+                                <div className="mt-[11px]">
+                                   {item.information?.map((info, k)=>(
+                                    <div key={k} className="inline-block mr-[11px]">
+                                        <button className="px-[22px] w-full border-[1px] py-[11px] mb-[5.5px] rounded-sm hover:bg-gray-200" key={k}>
+                                            {info.label}
+                                        </button>
+                                    </div>
+                                   ))}
                                 </div>
                             </div>
                         ))}
